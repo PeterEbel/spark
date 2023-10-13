@@ -1,0 +1,5 @@
+data/
+venv/
+warehouse/
+.vscode/
+.ipynb_checkpoints
