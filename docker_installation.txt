@@ -1,0 +1,9 @@
+sudo usermod -aG docker peter
+groups peter
+sudo chown -R peter:docker /var/run/docker.sock
+sudo chmod 660 /var/run/docker.sock
+sudo service docker restart
+docker --version 
+docker run -it --rm -p 8888:8888 jupyter/pyspark-notebook
+docker run -it --rm -p 8888:8888 -v /home/peter/Projects/spark:/home/jovyan/work jupyter/pyspark-notebook
+
